@@ -1,4 +1,4 @@
-<div ng-include="'components/navbar/navbar.html'"></div>
+<!-- <div ng-include="'components/navbar/navbar.html'"></div>
 
 <header class="hero-unit" id="banner">
   <div class="container">
@@ -25,4 +25,55 @@
         <a href="https://twitter.com/tyhenkel">@tyhenkel</a> |
          <a href="https://github.com/DaftMonk/generator-angular-fullstack/issues?state=open">Issues</a></p>
   </div>
-</footer>
+</footer> -->
+
+<div class="jumbotron">
+  <!-- <h1>'Allo, 'Allo!</h1> -->
+  <p class="lead">
+    <!-- <img src="images/yeoman.png" alt="I'm Yeoman"><br> -->
+    Sign in here
+  </p>
+<!--   <p><a class="btn btn-lg btn-success" ng-href="#/">Splendid!<span class="glyphicon glyphicon-ok"></span></a></p> -->
+  <form name = "myForm" novalidate>
+    <p>
+    <label> First Name:
+      <input type = "text" name = "input" ng-model = "AuthenticationData.firstName" required>
+    </label>
+  </p>
+  <p>
+    <label> Last Name:
+      <input type = "text" name = "input" ng-model = "AuthenticationData.lastName" required>
+    </label>
+  </p>
+    <p>
+    <label> Confirmation NUmber:
+      <input type = "text" name = "input" ng-model = "AuthenticationData.confirmation" required>
+    </label>
+  </p>
+  <p>
+    <button ng-click = "update(AuthenticationData)" value = "Save">
+      Submit
+    </button>
+</form>
+<pre> dataToSave = {{dataToSave | json }} </pre>
+<!--   <ul>  
+    <li ng-repeat = "testList in testList">
+      <span>{{testList.name}}</span>
+    </li>
+  </ul> -->
+</div>
+<!-- 
+<div class="row marketing">
+  <h4>HTML5 Boilerplate</h4>
+  <p>
+    HTML5 Boilerplate is a professional front-end template for building fast, robust, and adaptable web apps or sites.
+  </p>
+
+  <h4>Angular</h4>
+  <p>
+    AngularJS is a toolset for building the framework most suited to your application development.
+  </p>
+
+  <h4>Karma</h4>
+  <p>Spectacular Test Runner for JavaScript.</p>
+</div> -->
