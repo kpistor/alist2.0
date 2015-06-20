@@ -13,10 +13,8 @@ angular.module('alistApp')
     $scope.update = function(authenticationData) {
         $scope.dataToSave = angular.copy(authenticationData);
         $http.post('/api/passengerInfo',$scope.dataToSave).success(function (data, status) {
-
         }).
         error(function (data, status) {
-
         });
     }
     $scope.authenticationData = {
