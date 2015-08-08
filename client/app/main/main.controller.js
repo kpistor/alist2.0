@@ -2,11 +2,11 @@
 
 angular.module('alistApp')
   .controller('MainCtrl', ['$scope','$routeParams','$http', function ($scope, $routeParams, $http) {
-    $scope.testList = [
-      {'name':'thing 1'},
-      {'name':'thing 2'},
-      {'name':'thing 3'}
-    ];
+    // $scope.testList = [
+    //   {'name':'thing 1'},
+    //   {'name':'thing 2'},
+    //   {'name':'thing 3'}
+    // ];
 
     $scope.dataToSave = {};
 
@@ -20,7 +20,15 @@ angular.module('alistApp')
     $scope.authenticationData = {
         firstName: '',
         lastName: '',
-        confirmation: ''
+        confirmation: '',
+        date: ''
+    }
+
+    $scope.options = {
+      format: 'yyyy-mm-dd', // ISO formatted date
+      onClose: function(e) {
+        // do something when the picker closes   
+      }
     }
 
   }]);
